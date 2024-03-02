@@ -6,7 +6,6 @@ namespace MyShop.Domain.Entities.Products;
 public class Product : BaseEntity<long>
 {
     #region Properties
-
     public long ProductCategoryId { get; set; }
 
     [DisplayName("نام محصول")]
@@ -35,6 +34,11 @@ public class Product : BaseEntity<long>
     [MaxLength(5000, ErrorMessage = "{0} نمیتواند بیشتر از {1} کارکتر داشته باشد")]
     public string Description { get; set; }
 
+    #endregion
+
+    #region Relations
+
+    public ProductCategory ProductCategory { get; set; }
 
     #endregion
 }

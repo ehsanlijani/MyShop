@@ -13,4 +13,8 @@
     <Folder Include="Utilities\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop.DataLayer\MyShop.DataLayer.csproj" />
+  </ItemGroup>
+
 </Project>
