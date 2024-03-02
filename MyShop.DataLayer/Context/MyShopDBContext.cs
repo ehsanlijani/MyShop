@@ -1,6 +1,11 @@
-﻿namespace MyShop.DataLayer.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using MyShop.Domain.Entities.Products;
 
-public class MyShopDBContext
+namespace MyShop.DataLayer.Context;
+
+public class MyShopDBContext : DbContext
 {
-    public MyShopDBContext() {}
+    public MyShopDBContext(DbContextOptions<MyShopDBContext> options) : base(options) {}
+    public DbSet<Product> products{ get; set; }
+    public DbSet<ProductCategory> productCategories { get; set; }
 }
